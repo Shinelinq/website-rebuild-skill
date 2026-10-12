@@ -279,7 +279,7 @@ Before anything goes public, per-asset copyright **forensics** must be completed
 
 Versions advance with real rebuild projects: every feature and fix shipped was first validated on at least one complete project.
 
-Full history in **[CHANGELOG.md](CHANGELOG.md)**. Latest: **v0.3.23** — the lamalama campaign: the pixel gate learns to **wait for media arrival**. A `--ready` predicate can leave its reason in `window.__why` (printed when it never fires), every run fingerprints seed/ready/drive (a stale duplicate seed cost half a day), `--drive` states its landing contract, pixel-walk forwards the whole protocol; determinism gains three rules (the `autoplay` attribute bypasses a `play()` patch, the first HLS fragment's PTS leaves a hole at 0, a faked `paused` provokes hls.js's stall detection); serve gets `--stub-json` endpoint stubs; plus eleven M0/M2 fixes. Offline 235 + browser 21.
+Full history in **[CHANGELOG.md](CHANGELOG.md)**. Latest: **v0.3.24** — the second community PR: **the offline lane now runs on native Windows** (contributed by lianghua, measured on Windows 11 / Node 24: ok 2 before → 214 after; zero behavior change on POSIX). Two classes of cross-platform defect, each collapsed into one canonical spelling: ESM absolute-path imports go through `importAbs` (`pathToFileURL` is the one spelling correct on all three platforms), and pinned-version npx calls go through `spawnNpx` in `lib/npx.mjs` (on Windows npx is a .cmd shim and must run via cmd.exe). Native Windows is now in the support surface; further fixes welcome, one PR per failure.
 
 ## Contributing
 
